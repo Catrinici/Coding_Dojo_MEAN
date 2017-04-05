@@ -1,0 +1,25 @@
+<div ng-controller='sessionController' class="wrapper">
+  <h2>Full MEAN Wall</h2>
+  <h2>Wellcome, {{curUser.name}} <a href="/logout">Sign Out</a></h2>
+  <hr>
+  <div ng-controller="wallController">
+    <h3>Post a message</h3>
+    <textarea ng-model="newMessage.content" rows="8" cols="50"></textarea><br>
+    <input type="submit" ng-click="submitNewMessage()" value="Post a message">
+
+    <div class="messages" ng-repeat="mess in messages">
+        <h3>{{mess.content}}</h3>
+        <h3>--{{mess._user.name}}</h3>
+        <div ng-repeat="com in mess._comments">
+          <p class="greeting">----{{com.content}}</p>
+          <p>{{com._user.name}}</p>
+        </div>
+
+        <div class="comment-field">
+          <h5 class="greeting">Enter your comment bellow</h5>
+          <textarea ng-model="content" rows="4" cols="30"></textarea><br>
+          <input type="submit" ng-click="submitNewComment(mess._id, content)" value="Post a comment">
+        </div>
+    </div>
+  </div>
+</div>

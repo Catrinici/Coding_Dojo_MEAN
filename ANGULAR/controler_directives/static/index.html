@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head ng-app="app">
+    <meta charset="utf-8">
+    <title>controller and Directives</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src = 'bower_components/angular/angular.js'></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div ng-controller="foodsController">
+      <form ng-submit="addFood()">
+        <h2>Add your favorite food!</h2>
+        Favorite Food <input type="text" >
+        Currently typing:<p>{{food}}</p>
+        <input type="submit" ng-model="food" value="Add Food">
+        <select>
+          <option>filter...</option>
+          <option ng-repeat="food in foods">{{ food }}</option>
+        </select>
+      </form>
+    </div>
+  </body>
+</html>

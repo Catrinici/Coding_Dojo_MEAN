@@ -1,0 +1,30 @@
+fieldset {
+  width:50%;
+  height: 150px;
+  border: 2px solid #c31917;
+}
+.btn, a {
+  float:right;
+}
+a {
+  margin-right: 45px;;
+}
+legend, h2, h3, h5{
+  color: #c31917;
+}
+h4 {
+  color: #c31917;
+}
+.wrapper {
+  outline: 1px solid #c31917;
+  margin: 40px;
+  padding: 40px;
+}
+.messages {
+  outline: 2px dotted #fcc702;
+  margin: 20px;
+  padding: 20px;
+}
+.greeting {
+  color: #fcc702;
+}

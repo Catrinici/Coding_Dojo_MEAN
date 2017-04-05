@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Color Filter</title>
+    <script src = 'bower_components/angular/angular.js'></script>
+    <script type="text/javascript" src="./ngFilter.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style media="screen">
+    .container {
+      margin-top: 30px;
+      width: 700px;
+    }
+    #col {
+      width: 246px;
+    }
+  </style>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="colorsController" class="container">
+      Search Colors: <input type="text" ng-model="filter_color">
+      <table class="table">
+          <thead>
+            <tr>
+              <th>Name Color</th>
+              <th>Color</th>
+              <th>HEX</th>
+              <th>RGBD</th>
+            </tr>
+          </thead>
+          <tbody ng-repeat="color in colors | filter:filter_color | orderBy:'name'">
+            <tr>
+              <td>{{ color.name}}</td>
+              <td style="background-color:{{color.hex}}" id="col"></td>
+              <td>{{color.hex}}</td>
+              <td>{{color.rgb}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </body>
+</html>

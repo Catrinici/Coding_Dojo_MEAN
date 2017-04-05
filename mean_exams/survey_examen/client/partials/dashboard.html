@@ -1,0 +1,28 @@
+<div class="wrapper" ng-controller="sessionController">
+  <div class="top">
+    <button type="button"><a href="#/create">Create a New Poll</a></button>
+    <button type="button"><a href="/logout">Sign Out</a></button>
+    <h3>Current Polls:</h3>
+  </div>
+  <div ng-controller="questionController">
+    Search polls: <input type="text" placeholder="Search..." ng-model="topicFilter">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Survey Question</th>
+          <th>Date Posted</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="question in questions | filter: topicFilter">
+          <td>{{question._user.name}}</td>
+          <td><a style="color: blue" href="#/question/{{question._id}}">{{question.content}}</a></td>
+          <td>{{question.createdAt | date: 'medium'}}</td>
+          <td><button ng-if="question._user._id == curUser._id" type="button" ng-click="delete(question._id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

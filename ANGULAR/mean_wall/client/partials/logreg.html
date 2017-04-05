@@ -1,0 +1,12 @@
+<div ng-controller="sessionController">
+
+  <fieldset>
+    <legend><h3>Enter a username to continue</h3></legend>
+    Username:<input type="text" ng-model="user.name" placeholder="Enter your username.">
+    <input class="btn" type="submit" ng-click="login()" value="Enter">
+
+     <h4 ng-if="errors.length > 0"></h4>
+      <h4 ng-repeat="error in errors">{{error}}</h4>
+  </fieldset>
+
+</div>

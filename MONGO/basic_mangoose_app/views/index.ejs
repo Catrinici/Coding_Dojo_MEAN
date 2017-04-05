@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>basic mongoose</title>
+  </head>
+  <body>
+    <% if(typeof(errors) != 'undefined'){ %>
+      <% for(var x in errors){ %>
+        <h3><%= errors[x].message %></h3>
+      <% } >
+    <% } >
+    <form action="/users" method="post">
+      <fieldset>
+        <legend>User's information</legend>
+        <label for="name">Name:</label>
+        <input type="text" name="name" value=""><br>
+        <label for="age">Age:</label>
+        <input type="text" name="age" value="">
+        <hr>
+        <input type="submit" name="btn" value="Submit">
+        </fieldset>
+    </form>
+    <form action="/reset" method="get">
+     <fieldset>
+       <legend>Registered users</legend>
+        <% for (var i = 0; i < users.length; i++) { %>
+         <h4>Name:<%= users[i].name %></h4>
+         <h4>Age:<%= users[i].age %></h4>
+         <% } %>
+         <hr>
+         <input type="submit" name="reset" value="Reset">
+       </fieldset>
+   </form>
+ </body>
+</html>
