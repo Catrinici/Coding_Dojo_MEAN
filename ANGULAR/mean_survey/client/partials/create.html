@@ -1,0 +1,17 @@
+<div class="wrapper" ng-controller="sessionController">
+  <div ng-controller="questionController">
+    <h3>Put the question and options here:</h3>
+    <button type="button" name="button"><a href="#/dashboard">Cancel</a></button>
+    <label>Question: <input type="text" name="" ng-model="newQuestion.content"></label>
+    <label>Option 1: <input type="text" name="" ng-model="newQuestion.option1"></label>
+    <label>Option 2: <input type="text" name="" ng-model="newQuestion.option2"></label>
+    <label>Option 3: <input type="text" name="" ng-model="newQuestion.option3"></label>
+    <label>Option 4: <input type="text" name="" ng-model="newQuestion.option4"></label>
+    
+    <button type="submit" ng-click="createPoll(curUser._id)">Create Poll</button>
+
+    <ul ng-if="errors.length > 0">
+        <p style="color: red" ng-repeat="error in errors">{{error}}</p>
+    </ul>
+  </div>
+</div>

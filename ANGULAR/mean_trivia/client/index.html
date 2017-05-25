@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="./controllers/wallController.js"></script>
+    <script src="./controllers/playController.js"></script>
+    <script src="./controllers/newController.js"></script>
+    <script src="./factories/wallFactory.js"></script>
+  </head>
+  <body>
+    <div class="">
+      <a href="/#/">Home</a> | <a href="/#/add">Add a Question</a>
+    </div>
+    <div ng-view=""></div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<div ng-controller="sessionController">
+  <div class="wrapper" ng-controller = "questionController">
+  <h3>{{question.content}}</h3>
+  <button type="button" name="button"><a href="#/dashboard">Go To Polls</a></button>
+  <h5>Click the vote button to choose one</h5>
+  <table class="table">
+         <thead>
+          <tr>
+            <th>Optin</th>
+            <th>Current Count of Votes</th>
+            <th>Action</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr ng-repeat="option in question.options">
+            <td>{{option.option}}</td>
+            <td>{{option.vote}}</td>
+            <td><button class="btn" type="submit" ng-click="vote($index)">Vote</button></td>
+          </tr>
+         </tbody>
+  </table>
+</div>
+</div>

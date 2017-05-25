@@ -1,0 +1,41 @@
+<div class="wrapper" ng-controller=wallController>
+  <a href="#"  class="logout" ng-click="logout()">Log Out</a>
+  <hr>
+
+  <div class="login" ng-show="showPrompt">
+    <div class="login-prompt">
+      <p class="error">{{error_login}}</p>
+        <h3>Your Name:</h3>
+        <input type="text" ng-model="name">
+        <button ng-click="enter()">Enter</button>
+    </div>
+  </div>
+
+  <div class="error-message">
+      <h2>{{error_message}}</h2>
+  </div>
+  <div class="message-message">
+      <h2>{{message}}</h2>
+  </div>
+
+  <div class="play">
+    <button class="play-btn" ng-click="playGame()">Play!</button>
+    <p>Click the button above to start the trivia game</p>
+  </div>
+
+  Search: <input type="text" ng-model="search">
+  <table>
+      <thead>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Percentage</th>
+      </thead>
+      <tbody>
+          <tr ng-repeat="score in scores | filter:search">
+              <td>{{score.name}}</td>
+              <td>{{score.score}}/3</td>
+              <td>{{((score.score/3)*100).toFixed(1)}}%</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
