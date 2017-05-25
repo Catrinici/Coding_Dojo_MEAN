@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <h3>
+        {{title}}
+    </h3>
+    <p>RouterModule, routing, routerLink</p>
+    <h1>App Component</h1>
+    <hr>
+    <h3>Links</h3>
+
+    <a [routerLink]="['/home']">Home</a>
+    <a [routerLink]="['/tasks']">Tasks</a>
+    <a [routerLink]="['/notes']">Notes</a>
+
+    <h3>Click Events</h3>
+    <a [routerLink]="['/home']"><button>Home</button></a>
+    <a [routerLink]="['/tasks']"> <button>Tasks</button></a>
+    <a [routerLink]="['/notes']"><button>Notes</button></a>
+    <hr>
+    <router-outlet></router-outlet>
+</div>

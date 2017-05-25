@@ -1,0 +1,25 @@
+<div>
+    <h1>Form Template</h1>
+    <form (ngForm)="heroForm">
+        <p>First Name:<input type="text " name="first_name " [(ngModel)]="user.first_name" #firstname="ngModel" minlength="2" required></p>
+
+        <p>Last Name:<input type="text " name="last_name " [(ngModel)]="user.last_name "></p>
+
+        <p>Email:<input type="text " name="email " [(ngModel)]="user.email "></p>
+
+        <p>Password:<input type="text " name="password " [(ngModel)]="user.password "></p>
+
+        <p>Re-enter Password<input type="text " name="pw-conf "></p>
+
+        <p>State:<select>
+          <option value="volvo ">MA</option>
+          <option value="saab ">WA</option>
+          <option value="opel ">IL</option>
+          <option value="audi ">CA</option>
+        </select></p>
+
+        <button>Submit</button>
+    </form>
+
+
+</div>

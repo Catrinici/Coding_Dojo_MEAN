@@ -1,0 +1,20 @@
+<div class="new-pcontainer">
+    <h3>New Product Creation</h3>
+    <form (submit)="create_product()">
+        <label for="name">Name:</label>
+        <input type="text" [(ngModel)]="new_product.name" id="name" name="name">
+
+        <label for="description">Description</label>
+        <input type="text" id="description" [(ngModel)]="new_product.description" name="description">
+
+        <label for="price">Price</label>
+        <input type="number" id="price" [(ngModel)]="new_product.price" name="price">
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" [(ngModel)]="new_product.quantity" name="quantity">
+
+        <button>Submit</button>
+
+    </form>
+
+</div>

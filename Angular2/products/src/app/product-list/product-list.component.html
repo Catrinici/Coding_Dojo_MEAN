@@ -1,0 +1,24 @@
+<app-product-new (product)="add_product($event)"></app-product-new>
+<div class="pl-container">
+    <h4>Product List</h4>
+    <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let product of products">
+            <th>{{ product.name }}</th>
+            <th>{{ product.description }}</th>
+            <th>{{ product.price | currency:'USD'}}</th>
+            <th>{{ product.quantity }}</th>
+            <th>{{ product.date | date:'shortDate'}}</th>
+            <th>{{ product.date | date:'shortDate' }}</th>
+            <th><button (click)="delete(product)">Delete</button></th>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,10 @@
+<div class="component" *ngFor="let task of tasks">
+    <h5>
+        Task Details Component
+    </h5>
+    <p>Task Title: {{ task.title}}</p>
+    <div class="task-item" [class.completed]="task.completed">
+        <button (click)="complete(task)">Click to {{ task.completed ? 'mark Incomplete': 'Complete'}}</button>
+        <p>{{ task.completed ? 'Completed': 'Incomplete'}}</p>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <h1>
+        {{title}}
+    </h1>
+    <p>RouterModule, routing, routerLink</p>
+    <hr>
+    <a [routerLink]="['/home']">Home</a>
+    <a [routerLink]="['/notes']">Notes</a>
+    <hr>
+    <router-outlet></router-outlet>
+</div>

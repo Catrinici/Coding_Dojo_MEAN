@@ -1,0 +1,29 @@
+.component {
+    border: 1px dashed grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.task-item {
+    border: 1px dashed grey;
+    height: 90px;
+}
+
+button {
+    margin: 10px;
+    background-color: grey;
+}
+
+p {
+    margin: 10px;
+}
+
+.task-item.completed {
+    border: 2px solid green;
+}
+
+.task-item {
+    border: 2px solid red;
+}
